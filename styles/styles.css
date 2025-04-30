@@ -60,7 +60,7 @@ body::before {
 }
 
 body:hover::before {
-    --size: 1000px; /* Adjust size as needed for full-screen effect */
+    --size: 750px; /* Adjust size as needed for full-screen effect */
 }
 
 
