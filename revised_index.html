@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Mason Yuen — Computer Science student and developer. Projects, experience, and contact." />
+  <meta name="theme-color" content="#0c143d" />
+  <title>Mason Yuen — Portfolio</title>
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Mason Yuen — Portfolio" />
+  <meta property="og:description" content="Projects, experience, and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/logo.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Icons & Fonts -->
+  <link rel="icon" type="image/png" href="./assets/logo.png" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Bootstrap & Custom CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./revised_styles.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mason Yuen",
+    "jobTitle": "Computer Science Student",
+    "sameAs": [
+      "https://github.com/myuen1015",
+      "https://www.linkedin.com/in/mason-yuen-a70073311/"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="visually-hidden-focusable" href="#content">Skip to content</a>
+
+  <!-- Floating Social -->
+  <aside class="social-stick" aria-label="Social links">
+    <a class="text-light" href="https://github.com/myuen1015" target="_blank" rel="noopener" aria-label="GitHub">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <a class="text-light" href="https://www.linkedin.com/in/mason-yuen-a70073311/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+  </aside>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#home"><span class="brand-accent">Mason</span> Yuen</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="primaryNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-gradient ms-lg-3 text-white">Hire me</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="content">
+    <!-- Hero -->
+    <section id="home" class="py-5 py-lg-6 bg-dark-subtle">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-md-6 order-2 order-md-1">
+            <h1 class="display-5 fw-bold mb-3">
+              Hi, I'm <span class="brand-accent">Mason Yuen</span>
+            </h1>
+            <p class="lead text-body-secondary mb-4">
+              Computer Science student building clean, practical software — from Moodle SAT tooling to C++ word-game solvers and Python data pipelines.
+            </p>
+            <div class="d-flex gap-3">
+              <a class="btn btn-gradient text-white shadow-soft" href="./assets/Mason Yuen Resume 11-22-2024.pdf" target="_blank" rel="noopener">View Resume</a>
+              <a class="btn btn-outline-light" href="#projects">See Projects</a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 order-1 order-md-2 text-center">
+            <img src="./assets/file.jpg" class="img-fluid rounded-4 shadow-soft hero-img" alt="Mason working on web development" loading="eager" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- About -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="section-title h1 mb-3 text-center">About Me</h2>
+        <p class="text-body-secondary fs-5 text-center">
+          Motivated and detail-oriented Computer Science student at the College of Staten Island. I enjoy shipping useful tools and learning by doing: parsing messy documents into structured data, building interactive UIs, and automating the boring parts.
+        </p>
+      </div>
+    </div>
+
+    <div class="row mt-4 g-3 justify-content-center">
+      <div class="col-6 col-sm-4 col-lg-2">
+        <div class="card skill-card text-center h-100">
+          <div class="card-body py-4"><div class="fw-semibold">Python</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-lg-2">
+        <div class="card skill-card text-center h-100">
+          <div class="card-body py-4"><div class="fw-semibold">TypeScript</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-lg-2">
+        <div class="card skill-card text-center h-100">
+          <div class="card-body py-4"><div class="fw-semibold">C++</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-lg-2">
+        <div class="card skill-card text-center h-100">
+          <div class="card-body py-4"><div class="fw-semibold">HTML/CSS</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-lg-2">
+        <div class="card skill-card text-center h-100">
+          <div class="card-body py-4"><div class="fw-semibold">Moodle</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-lg-2">
+        <div class="card skill-card text-center h-100">
+          <div class="card-body py-4"><div class="fw-semibold">PHP</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-lg-2">
+        <div class="card skill-card text-center h-100">
+          <div class="card-body py-4"><div class="fw-semibold">BeautifulSoup</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-lg-2">
+        <div class="card skill-card text-center h-100">
+          <div class="card-body py-4"><div class="fw-semibold">Pandas</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-lg-2">
+        <div class="card skill-card text-center h-100">
+          <div class="card-body py-4"><div class="fw-semibold">CSV</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Projects -->
+    <section id="projects" class="py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
+          <div>
+            <h2 class="section-title h1 m-0">Projects</h2>
+            <p class="text-body-secondary m-0">Focused highlights (flagship first)</p>
+          </div>
+        </div>
+
+        <div id="projectGrid" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+          <!-- Word Hunt Solver ONLY (flagship) -->
+          <div class="col" data-tags="systems">
+            <article class="card h-100 project-card shadow-soft">
+              <img src="./assets/Wordhuntimage.png" class="card-img-top" alt="Word Hunt solver output" loading="lazy" decoding="async" data-bs-toggle="modal" data-bs-target="#caseStudyModal" data-case="wordhunt" data-bs-image="./assets/Wordhuntimage.png">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <h3 class="h5 m-0">Word Hunt Solver</h3>
+                  <div class="d-flex gap-1">
+                    <span class="badge text-bg-primary">C++</span>
+                    <span class="badge text-bg-secondary">Trie</span>
+                    <span class="badge text-bg-secondary">DFS</span>
+                  </div>
+                </div>
+                <p class="text-body-secondary">4×4 solver using Trie lookup + DFS with backtracking across 8 directions.</p>
+                <ul class="small text-body-secondary mb-3">
+                  <li>Finds all words ≥4 letters from 50k-word lexicon</li>
+                  <li>Sub-second solve time on mid-range CPU</li>
+                </ul>
+                <div class="mt-auto d-flex gap-2">
+                  <a class="btn btn-sm btn-outline-light" href="#" target="_blank" rel="noopener">Demo</a>
+                  <a class="btn btn-sm btn-outline-light" href="#" target="_blank" rel="noopener">GitHub</a>
+                  <button class="btn btn-sm btn-gradient text-white ms-auto" data-bs-toggle="modal" data-bs-target="#caseStudyModal" data-case="wordhunt">Case study</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- More from GitHub (auto) -->
+        <div class="mt-5">
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+            <h3 class="h4 m-0">More projects from GitHub</h3>
+            <a class="btn btn-sm btn-outline-light" id="viewAllRepos" target="_blank" rel="noopener">View profile</a>
+          </div>
+          <div id="ghRepos" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-5">
+      <div class="container">
+        <h2 class="section-title h1 mb-4">Experience</h2>
+        <div class="row g-4">
+          <!-- Internship -->
+          <div class="col-12">
+            <article class="card shadow-soft">
+              <div class="card-body">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
+                  <h3 class="h5 m-0">Full-Stack Developer Intern — PYE Educational Center</h3>
+                  <span class="badge text-bg-secondary">Dates: 2025</span>
+                </div>
+                <ul class="mb-0 text-body-secondary">
+                  <li>Built a Moodle plugin (<code>local_satpractice</code>) to deliver Digital SAT practice with timers, session tracking, and JSON-based question ingestion.</li>
+                  <li>Developed a Python pipeline (DOCX/HTML → JSON) preserving equations/images; automated image mapping and formatting to reduce manual work.</li>
+                  <li>Improved question accuracy and review speed; productionized uploads with basic validation and error messaging.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <!-- College Assistant -->
+          <div class="col-12">
+            <article class="card shadow-soft">
+              <div class="card-body">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
+                  <h3 class="h5 m-0">College Assistant, IT Department — College of Staten Island</h3>
+                  <span class="badge text-bg-secondary">Aug 2025 – Present · Staten Island, NY</span>
+                </div>
+                <ul class="mb-0 text-body-secondary">
+                  <li>Assist students & faculty with MFA setup, account recovery, and CIX portal login issues.</li>
+                  <li>Operate and monitor computer labs; ensure systems remain functional and secure.</li>
+                  <li>Collaborate with on-site staff to deliver reliable, responsive support.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="section-title h1 mb-4 text-center">Contact</h2>
+            <div class="card shadow-soft">
+              <div class="card-body p-4 p-lg-5">
+                <div class="row g-4">
+                  <div class="col-md-5">
+                    <h3 class="h5">Let's Talk</h3>
+                    <p class="text-body-secondary">Feel free to reach out.</p>
+                    <ul class="list-unstyled small m-0">
+                      <li class="mb-2"><i class="fa-solid fa-envelope me-2"></i><a href="mailto:myuen1015@gmail.com">myuen1015@gmail.com</a></li>
+                      <li class="mb-2"><i class="fa-solid fa-phone me-2"></i><a href="tel:+19179811006">+1 (917) 981-1006</a></li>
+                      <li class="mb-2"><i class="fa-solid fa-location-dot me-2"></i>Staten Island, NY</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-7">
+                    <form action="https://formsubmit.co/myuen1015@gmail.com" method="POST" class="needs-validation" novalidate>
+                      <input type="hidden" name="_captcha" value="true" />
+                      <input type="hidden" name="_subject" value="Portfolio Contact" />
+                      <input type="hidden" name="_template" value="table" />
+                      <input type="text" name="_honey" class="d-none" tabindex="-1" autocomplete="off" />
+
+                      <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required autocomplete="name">
+                        <div class="invalid-feedback">Please provide your name.</div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required autocomplete="email">
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="6" placeholder="Tell me a bit about your project or question" required></textarea>
+                        <div class="invalid-feedback">Please include a message.</div>
+                      </div>
+
+                      <button type="submit" class="btn btn-gradient text-white">Send</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="modal fade" id="lightbox" tabindex="-1" aria-hidden="true" aria-labelledby="lightboxLabel">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bg-dark border-0">
+        <div class="modal-body p-0">
+          <img id="lightboxImg" alt="Expanded project image" class="w-100 rounded-3" />
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case Study Modal -->
+  <div class="modal fade" id="caseStudyModal" tabindex="-1" aria-hidden="true" aria-labelledby="caseStudyLabel">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark border-0">
+        <div class="modal-header border-0">
+          <h3 class="modal-title h5" id="caseStudyLabel" data-cs-title>Project — Case Study</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" data-cs-body>
+          <!-- Filled dynamically -->
+        </div>
+        <div class="modal-footer border-0">
+          <a class="btn btn-outline-light" data-cs-demo target="_blank" rel="noopener">Demo</a>
+          <a class="btn btn-outline-light" data-cs-git target="_blank" rel="noopener">GitHub</a>
+          <button type="button" class="btn btn-gradient text-white" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-muted py-4">
+    <div class="container text-center small text-body-secondary">
+      <span>© <span id="year"></span> Mason Yuen</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS + Your Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Bootstrap client-side validation
+    (() => {
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+  </script>
+  <script src="./revised_scripts.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* ==========================================
+   Mason Yuen — Revised Styles (Bootstrap-friendly)
+   Purpose: modern, professional layer on top of Bootstrap
+   Notes: keep your original uniqueness (gradients, spotlight, soft shadows)
+   Include AFTER Bootstrap link
+   ========================================== */
+
+/* THEME TOKENS */
+:root{
+  /* Palette (accessible, modern) */
+  --bg: #0b1028;            /* page bg */
+  --surface: #131835;       /* cards/nav */
+  --surface-2: #0e1431;
+  --text: #f2f5ff;          /* primary text */
+  --muted: #b9bfd4;         /* secondary text */
+  --accent-1: #7aa2ff;      /* cornflower */
+  --accent-2: #b38aff;      /* purple */
+  --accent-grad: linear-gradient(90deg, #0d6efd, #6f42c1);
+  --ring: rgba(122,162,255,.45);
+  --card: rgba(255,255,255,0.05);
+  --border: rgba(255,255,255,0.12);
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius: 18px;
+  --radius-sm: 12px;
+}
+
+/* Respect motion preferences */
+@media (prefers-reduced-motion: reduce){
+  * { animation: none !important; transition: none !important; }
+}
+
+html, body { background: var(--bg); color: var(--text); }
+
+/* Bootstrap theming nudge (keeps BS components coherent in dark) */
+[data-bs-theme="dark"]{
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--text);
+  --bs-border-color: var(--border);
+  --bs-tertiary-bg: color-mix(in oklab, var(--surface) 88%, black);
+}
+
+/* Reusable utilities */
+.brand-accent { 
+  background: linear-gradient(90deg, #6ea8fe, #c29ffa); 
+  -webkit-background-clip: text; background-clip: text; color: transparent; 
+}
+.shadow-soft { box-shadow: var(--shadow); }
+.section-title { letter-spacing: .5px; }
+.btn-gradient { background: var(--accent-grad); border: none; }
+.btn-gradient:hover { filter: brightness(1.06); }
+
+/* Floating social (matches your original style) */
+.social-stick{ position: fixed; top: 8rem; left: 1rem; z-index: 1030; display: grid; gap: .5rem; }
+.social-stick a{ width:44px;height:44px; display:grid; place-items:center; border-radius:50%; background: var(--card); border:1px solid var(--border); text-decoration:none; transition: transform .22s ease, background-color .22s ease; }
+.social-stick a:hover{ transform: translateY(-2px); background: rgba(255,255,255,.08); }
+
+/* Navbar */
+.navbar{ background: linear-gradient(to bottom, rgba(19,24,53,.9), rgba(19,24,53,.65)) !important; backdrop-filter: blur(6px); border-bottom: 1px solid var(--border); }
+.nav-link{ position:relative; }
+.nav-link::after{ content:""; position:absolute; left:.4rem; right:.4rem; bottom:.35rem; height:2px; background: var(--accent-1); transform: scaleX(0); transform-origin:left; transition: transform .2s ease; border-radius:2px; }
+.nav-link:hover::after{ transform: scaleX(1); }
+
+/* Hero */
+.hero-img{ border-radius: 20px; border:1px solid var(--border); box-shadow: 0 16px 48px rgba(0,0,0,.45); }
+
+/* Cards / Projects */
+.project-card{ background: var(--surface); border:1px solid var(--border); border-radius: var(--radius); overflow:hidden; }
+.project-card .card-img-top{ object-fit: cover; height: 200px; border-bottom: 1px solid var(--border); }
+.card{ background: var(--surface); border-color: var(--border); border-radius: var(--radius); }
+.badge{ border:1px solid var(--border); }
+
+/* Ratio images inside cards */
+.ratio > img{ object-fit: cover; border-top-left-radius: var(--radius); border-top-right-radius: var(--radius); }
+
+/* Experience / Footer band */
+.footer-muted{ border-top:1px solid var(--border); background: var(--surface-2); }
+
+/* Contact */
+.form-control{ background: color-mix(in oklab, var(--surface) 94%, black); border-color: var(--border); color: var(--text); }
+.form-control:focus{ border-color: color-mix(in oklab, var(--accent-1) 60%, white); box-shadow: 0 0 0 .25rem rgba(13,110,253,.15); }
+
+/* Modal / Lightbox */
+.modal-content{ background: var(--surface); border-color: var(--border); }
+
+/* Subtle page spotlight (kept from your uniqueness) */
+body::before{
+  --size: 0; content:""; position: fixed; inset: 0 auto auto 0; left: var(--x); top: var(--y);
+  width: var(--size); height: var(--size); transform: translate(-50%,-50%);
+  background: radial-gradient(circle closest-side, rgba(106,131,231,.28), transparent 60%);
+  pointer-events: none; z-index: 0; transition: width .2s ease, height .2s ease;
+}
+body:hover::before{ --size: 720px; }
+
+/* Buttons */
+.btn{ border-radius: 999px; }
+.btn-outline-light{ --bs-btn-hover-color:#fff; --bs-btn-hover-bg: rgba(255,255,255,.08); --bs-btn-border-color: var(--border); }
+
+/* Footer */
+footer .text-body-secondary{ color: var(--muted) !important; }
+
+/* Headings inside cards */
+.card-body .h5, .card-body .h6 { color: #e7eaff; }
+
+/* Default secondary text color */
+.text-body-secondary{ color: var(--muted) !important; }
+
+/* === Skill cards hover effect === */
+.skill-card{
+  position: relative;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.skill-card:hover{
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0,0,0,.45), 0 0 0 1px rgba(122,162,255,.35) inset;
+  border-color: color-mix(in oklab, var(--accent-1) 60%, white);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.00));
+}
+.skill-card:hover .fw-semibold{
+  color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .skill-card{ transition: none; }
+  .skill-card:hover{ transform: none; }
+}
+
+/* Optional: tighten grid gaps on very small screens */
+@media (max-width: 480px){
+  .row.g-4{ --bs-gutter-x: .75rem; --bs-gutter-y: 1rem; }
+}
+
+/* Stronger skill card hover (works even with reduced motion) */
+.skill-card{
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;
+}
+.skill-card::after{
+  content:"";
+  position:absolute; inset:-1px;
+  background:
+    radial-gradient(120px 120px at 50% 20%, rgba(122,162,255,.18), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+  opacity:.7; /* visible even if no transform */
+  pointer-events:none;
+}
+.skill-card:hover{
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0,0,0,.45), 0 0 0 1px rgba(122,162,255,.35) inset;
+  border-color: color-mix(in oklab, var(--accent-1) 60%, white);
+}
+.skill-card:hover .fw-semibold{ color:#fff; }
+
+/* If reduced motion is preferred, keep lift but remove scaling */
+@media (prefers-reduced-motion: reduce){
+  .skill-card{ transition: box-shadow .25s ease, border-color .25s ease, background-color .25s ease; }
+  .skill-card:hover{ transform: translateY(-4px); }
+}
+
+/* Mouse-position glow inside cards */
+.skill-card{ --mx:50%; --my:50%; }
+.skill-card::after{
+  content:"";
+  position:absolute; inset:-1px;
+  background:
+    radial-gradient(160px 160px at var(--mx) var(--my), rgba(122,162,255,.22), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+  transition: opacity .2s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.skill-card:hover::after{ opacity: 1; }
